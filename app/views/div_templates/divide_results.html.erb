@@ -1,5 +1,4 @@
 <h1>Division</h1>
-
 <dl>
   <dt>First number</dt>
   <dd><%= @first_number %></dd>
@@ -8,7 +7,6 @@
   <dd><%= @second_number %></dd>
 
   <dt>Result</dt>
-  <dd><%= result %></dd>
+  <dd><%= @result.is_a?(String) ? @result : @result.round(2) %></dd> <!-- Added rounding for better display -->
 </dl>
-
 <a href="/divide">Do another division</a>
